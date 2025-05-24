@@ -1,0 +1,352 @@
+/* Tabletas y computadoras de escritorio más pequeñas */
+@media (max-width: 992px) {
+    .navbar-container {
+        padding: 0 20px;
+    }
+    
+    .menu-toggle {
+        display: block;
+        z-index: 1001;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 300px;
+        height: 100%;
+        background-color: white;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+        transition: right 0.3s ease;
+        z-index: 1000;
+    }
+    
+    .nav-menu.active {
+        right: 0;
+    }
+    
+    .nav-menu li {
+        margin: 15px 0;
+    }
+    
+    .nav-link {
+        font-size: 1.2rem;
+    }
+    
+    .cards {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+    
+    .testimonial-content {
+        padding: 20px;
+    }
+    
+    .gallery {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+    
+    .gallery-item {
+        height: 200px;
+    }
+    
+    .team-category {
+        min-width: 200px;
+    }
+    
+    .stats-container {
+        flex-wrap: wrap;
+    }
+    
+    .stat-item {
+        flex: 1 0 45%;
+        margin-bottom: 20px;
+    }
+}
+
+/*Teléfonos móviles*/
+@media (max-width: 768px) {
+    .header-content h1 {
+        font-size: clamp(2rem, 8vw, 3rem);
+    }
+    
+    .header-content p {
+        font-size: clamp(1rem, 4vw, 1.2rem);
+    }
+    
+    .cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .cards.three-columns {
+        grid-template-columns: 1fr;
+    }
+    
+    .section {
+        padding: 60px 0;
+    }
+    
+    .section-header {
+        margin-bottom: 30px;
+    }
+    
+    .tabs {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .tab-btn {
+        width: 100%;
+    }
+    
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+    
+    .testimonial-author {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .footer-container {
+        flex-direction: column;
+    }
+    
+    .footer-info, .footer-contact, .footer-form {
+        width: 100%;
+        padding: 0;
+        margin-bottom: 40px;
+    }
+    
+    .stat-item {
+        flex: 1 0 100%;
+    }
+    
+    .team-container {
+        flex-direction: column;
+    }
+    
+    .team-category {
+        width: 100%;
+    }
+    
+    .modal-content {
+        width: 95%;
+        padding: 20px;
+    }
+    
+    .form-control {
+        padding: 10px;
+    }
+}
+
+/*Teléfonos móviles pequeños*/
+@media (max-width: 480px) {
+    .header-content h1 {
+        font-size: clamp(1.8rem, 7vw, 2.5rem);
+    }
+    
+    .header-content p {
+        font-size: clamp(0.9rem, 3.5vw, 1.1rem);
+    }
+    
+    .btn {
+        padding: 10px 25px;
+        font-size: 0.9rem;
+    }
+    
+    .section-header h2 {
+        font-size: clamp(1.5rem, 6vw, 2rem);
+    }
+    
+    .card {
+        padding: 20px;
+    }
+    
+    .testimonial-content {
+        padding: 15px;
+    }
+    
+    .testimonial-content p {
+        font-size: 0.9rem;
+    }
+    
+    .testimonial-author {
+        margin-top: 10px;
+    }
+    
+    blockquote p {
+        font-size: 1.2rem;
+    }
+    
+    .social-link {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .nav-menu {
+        width: 100%;
+        max-width: none;
+    }
+    
+    .back-to-top {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .gallery-item {
+        height: 180px;
+    }
+    
+    .gallery-overlay {
+        padding: 15px;
+    }
+    
+    .gallery-info h4 {
+        font-size: 1rem;
+    }
+    
+    .gallery-info p {
+        font-size: 0.8rem;
+    }
+    
+    .card-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.3rem;
+    }
+}
+
+/* Consultas de medios basadas en altura */
+@media (max-height: 600px) {
+    .header-content {
+        padding: 40px 0;
+    }
+    
+    .scroll-indicator {
+        bottom: 10px;
+    }
+    
+    .nav-menu {
+        padding: 20px 0;
+    }
+    
+    .nav-menu li {
+        margin: 10px 0;
+    }
+}
+
+/* Medios impresos */
+@media print {
+    .navbar,
+    .footer,
+    .back-to-top,
+    .btn,
+    .scroll-indicator {
+        display: none !important;
+    }
+    
+    body {
+        background-color: white;
+        color: black;
+    }
+    
+    .container {
+        width: 100%;
+        max-width: none;
+    }
+    
+    .section {
+        page-break-inside: avoid;
+        margin: 20px 0;
+        padding: 20px 0;
+    }
+    
+    .card {
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+}
+
+/* Pantallas de alta resolución */
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+       only screen and (min-resolution: 192dpi) {
+    .parallax-header {
+        background-image: url('https://i.postimg.cc/yNJ97fGC/inicio0.png');
+        background-size: cover;
+    }
+}
+
+/*Modo oscuro*/
+@media (prefers-color-scheme: dark) {
+    .navbar {
+        background-color: rgba(33, 33, 33, 0.95);
+    }
+    
+    .navbar.scrolled {
+        background-color: rgb(33, 33, 33);
+    }
+    
+    .logo {
+        color: var(--secondary-color);
+    }
+    
+    .nav-link {
+        color: white;
+    }
+    
+    .nav-menu {
+        background-color: #212121;
+    }
+    
+    .bar {
+        background-color: white;
+    }
+    
+    .card,
+    .stats-section,
+    .team-category {
+        background-color: #333;
+        color: white;
+    }
+    
+    .card h3 {
+        color: var(--secondary-color);
+    }
+    
+    .card p {
+        color: #ddd;
+    }
+    
+    .tag {
+        background-color: rgba(0, 166, 255, 0.2);
+    }
+    
+    .progress-bar {
+        background-color: #555;
+    }
+    
+    .subjects-list li {
+        color: #ddd;
+    }
+    
+    .modal-content {
+        background: linear-gradient(145deg, #1a1a1a, #333);
+    }
+    
+    .quote {
+        background-color: #2a2a2a;
+    }
+    
+    blockquote p {
+        color: white;
+    }
+    
+    blockquote cite {
+        color: #bbb;
+    }
+}

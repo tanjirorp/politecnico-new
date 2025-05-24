@@ -1,0 +1,306 @@
+/* Animation Classes */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fade-in:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+.fade-in:nth-child(3) {
+    transition-delay: 0.4s;
+}
+
+.fade-in:nth-child(4) {
+    transition-delay: 0.6s;
+}
+
+/* Header Animations */
+.animate-title {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s forwards 0.5s;
+}
+
+.animate-subtitle {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s forwards 0.8s;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Reveal Animation */
+.reveal {
+    position: relative;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Card Animation on Hover */
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.card:hover::before {
+    transform: scaleX(1);
+}
+
+/* Button Animations */
+.btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.5);
+    opacity: 0;
+    border-radius: 100%;
+    transform: scale(1, 1) translate(-50%);
+    transform-origin: 50% 50%;
+}
+
+.btn:hover::after {
+    animation: ripple 1s ease-out;
+}
+
+@keyframes ripple {
+    0% {
+        transform: scale(0, 0);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(30, 30);
+        opacity: 0;
+    }
+}
+
+/* Navigation Animation */
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.navbar {
+    animation: slideIn 0.5s forwards;
+}
+
+/* Counter Animation */
+@keyframes countUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.counter.animate {
+    animation: countUp 1s forwards;
+}
+
+/* Testimonial Slide Animation */
+@keyframes slideRight {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.testimonial.slide-right {
+    animation: slideRight 0.5s forwards;
+}
+
+.testimonial.slide-left {
+    animation: slideLeft 0.5s forwards;
+}
+
+/* Mobile Menu Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.nav-menu.active {
+    animation: fadeIn 0.3s forwards;
+}
+
+/* Responsive Animation for Mobile Menu Bars */
+@keyframes topBarActive {
+    50% {
+        transform: translateY(8px);
+    }
+    100% {
+        transform: translateY(8px) rotate(45deg);
+    }
+}
+
+@keyframes middleBarActive {
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes bottomBarActive {
+    50% {
+        transform: translateY(-8px);
+    }
+    100% {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+.menu-toggle.active .bar:nth-child(1) {
+    animation: topBarActive 0.3s forwards;
+}
+
+.menu-toggle.active .bar:nth-child(2) {
+    animation: middleBarActive 0.3s forwards;
+}
+
+.menu-toggle.active .bar:nth-child(3) {
+    animation: bottomBarActive 0.3s forwards;
+}
+
+/* CSS Animations for Focus States */
+.form-control:focus {
+    animation: focusAnimation 0.3s forwards;
+}
+
+@keyframes focusAnimation {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 166, 255, 0.2);
+    }
+    100% {
+        box-shadow: 0 0 0 3px rgba(0, 166, 255, 0.2);
+    }
+}
+
+/* Section Animation Delays */
+.section:nth-child(2) {
+    transition-delay: 0.1s;
+}
+
+.section:nth-child(3) {
+    transition-delay: 0.2s;
+}
+
+.section:nth-child(4) {
+    transition-delay: 0.3s;
+}
+
+.section:nth-child(5) {
+    transition-delay: 0.4s;
+}
+
+/* Gallery Item Hover Animation */
+.gallery-item .gallery-img {
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover .gallery-img {
+    transform: scale(1.1);
+}
+
+/* Progress Bar Animation */
+@keyframes progressAnimation {
+    from {
+        width: 0;
+    }
+    to {
+        width: var(--progress-width);
+    }
+}
+
+.progress.animate {
+    animation: progressAnimation 1.5s forwards;
+}
+
+/* Scroll Indicator Animation */
+@keyframes scrollIndicator {
+    0% {
+        opacity: 0.8;
+        transform: translateY(0);
+    }
+    50% {
+        opacity: 0.4;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 0.8;
+        transform: translateY(0);
+    }
+}
+
+.scroll-indicator span {
+    animation: scrollIndicator 1.5s infinite;
+}
+
+.scroll-indicator span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.scroll-indicator span:nth-child(3) {
+    animation-delay: 0.4s;
+}

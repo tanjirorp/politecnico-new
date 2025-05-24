@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Politécnico San Rafael</title>
+    <!-- lINK: con esto lo que hacemos es enlazar lo que vendiria siendo un archivo para que el html lo detecte y utilizatce dependiendo lo que hace -->
+    <!-- -->
+    <!--Vinculación de CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <!--Vinculaciones externas para mayor atractivo visual -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+</head>
+<body>
+    <!--Cargado inicial para esperar a que complete el cargado de los elementos de la pagina -->
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Navigation: en esta sección podemos decir que es parte de la bara de navegación 
+     que aparece ariba del todo en la pagina, con esta parte se puede poner una lista de enlaces que panda a una parte 
+     especifica de la pagina-->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <span>Politécnico San Rafael</span>
+            </div>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <!--Menu: normal en una pantalla mayor a 992px (table o compu), y un menu desplegable para menores a esa (celulares) -->
+            <ul class="nav-menu">
+                <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+                <li><a href="#historia" class="nav-link">Historia</a></li>
+                <li><a href="#esencia" class="nav-link">Esencia</a></li>
+                <li><a href="#academica" class="nav-link">Oferta Académica</a></li>
+                <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
+                <li><a href="#equipo" class="nav-link">Equipo</a></li>
+                <li><a href="#contacto" class="nav-link">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Encabezado: la parte que se ve de inicio cuando se entra a la pagina -->
+    <header id="inicio" class="parallax-header">
+        <div class="header-content">
+            <h1 class="animate-title">Politécnico San Rafael</h1>
+            <p class="animate-subtitle">¡Tu futuro tecnológico comienza aquí!</p>
+            <a href="#historia" class="btn btn-primary">Descubre más</a>
+        </div>
+        <div class="scroll-indicator">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <!-- Contenedor Principal -->
+    <div class="container">
+        <!-- Estadísticas -->
+        <section class="stats-section">
+            <div class="stats-container">
+                <div class="stat-item">
+                    <i class="fas fa-user-graduate"></i>
+                    <span class="counter" data-target="46">0</span>
+                    <p>Estudiantes</p>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-laptop-code"></i>
+                    <span class="counter" data-target="2">0</span>
+                    <p>Carreras Técnicas</p>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <span class="counter" data-target="16">0</span>
+                    <p>Profesores</p>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span class="counter" data-target="2">0</span>
+                    <p>Años de Experiencia</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Historia -->
+        <section id="historia" class="section reveal">
+            <div class="section-header">
+                <h2>Nuestra Historia</h2>
+                <div class="section-underline"></div>
+            </div>
+            <div class="cards">
+                <div class="card fade-in">
+                    <div class="card-icon">
+                        <i class="fas fa-history"></i>
+                    </div>
+                    <h3>El Inicio</h3>
+                    <p>El Politécnico San Rafael inicia con el sueño de Ángel Del Rosario Medina, un docente comprometido con la educación técnico-profesional. Junto a la directora María Del Carmen Guerrero, identificó la necesidad de ofrecer a los jóvenes una formación que les brindara mejores oportunidades laborales.</p>
+                    <p>Desde 2017, este proyecto fue impulsado con capacitaciones y visitas a politécnicos consolidados, como Estrella Liz en Santo Domingo, Sergio Augusto Beras y el Instituto Agropecuario de Higüey. Finalmente, el esfuerzo y la perseverancia dieron frutos, permitiendo la creación de nuestro politécnico como un espacio de innovación y crecimiento para la comunidad.</p>
+                    <blockquote class="highlight-quote">
+                        <p>"La esperanza es lo último que se pierde cuando alguien tiene deseos de superación."</p>
+                    </blockquote>
+                </div>
+                <div class="card fade-in">
+                    <div class="card-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>El Crecimiento</h3>
+                    <p>El Politécnico San Rafael se inicia formalmente el 20 de septiembre del año 2023 con la apertura del título de Desarrollo de Aplicaciones y Sistemas Informáticos con 31 estudiantes y de estos se mantienen 29 en constante avance.</p>
+                    <p>En la actualidad este título tiene 2 secciones. Este nuevo año escolar 2024-2025 se agrega un nuevo título, el cual corresponde a Soporte de Redes y Sistemas Informáticos con 17 estudiantes.</p>
+                    <div class="progress-container">
+                        <div class="progress-item">
+                            <span>5to Desarrollo de Aplicaciones</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 100%;"></div>
+                            </div>
+                            <span>29 estudiantes</span>
+                        </div>
+                        <div class="progress-item">
+                            <span>4to Desarrollo de Aplicaciones</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 100%;"></div>
+                            </div>
+                            <span>21 estudiantes</span>
+                        </div>
+                        <div class="progress-item">
+                            <span>Soporte de Redes</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 80%;"></div>
+                            </div>
+                            <span>17 estudiantes</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Esencia -->
+        <section id="esencia" class="section reveal">
+            <div class="section-header">
+                <h2>Nuestra Esencia</h2>
+                <div class="section-underline"></div>
+            </div>
+            <div class="cards three-columns">
+                <div class="card fade-in">
+                    <div class="card-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Misión</h3>
+                    <p>El Politécnico San Rafael busca formar individuos capaces de ejercer sus carreras técnicas con calidad y eficiencia, respondiendo a las necesidades de la sociedad con un compromiso social y laboral.</p>
+                </div>
+                <div class="card fade-in">
+                    <div class="card-icon">
+                        <i class="fas fa-binoculars"></i>
+                    </div>
+                    <h3>Visión</h3>
+                    <p>Ser un referente en educación técnico-profesional, fomentando habilidades innovadoras y una actitud positiva frente a los cambios sociales.</p>
+                </div>
+                <div class="card fade-in">
+                    <div class="card-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Valores</h3>
+                    <div class="tags-container">
+                        <span class="tag">Respeto</span>
+                        <span class="tag">Igualdad</span>
+                        <span class="tag">Compromiso</span>
+                        <span class="tag">Equidad</span>
+                        <span class="tag">Honestidad</span>
+                        <span class="tag">Solidaridad</span>
+                        <span class="tag">Puntualidad</span>
+                        <span class="tag">Responsabilidad</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Oferta Académica: es mas como la materia que damos -->
+        <section id="academica" class="section reveal">
+            <div class="section-header">
+                <h2>Preparándote para la Era Digital</h2>
+                <div class="section-underline"></div>
+            </div>
+            <div class="cards">
+                <div class="card feature-card fade-in">
+                    <div class="card-icon blue">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Desarrollo de Aplicaciones</h3>
+                    <p>✅ Aprende a programar y crear soluciones digitales para el mercado actual.</p>
+                    <div class="subjects-container">
+                        <h4>Materias destacadas:</h4>
+                        <ul class="subjects-list">
+                            <li><i class="fas fa-check-circle"></i> Diseño de portales web</li>
+                            <li><i class="fas fa-check-circle"></i> Bases de datos</li>
+                            <li><i class="fas fa-check-circle"></i> Orientación laboral</li>
+                            <li><i class="fas fa-check-circle"></i> Reporte</li>
+                            <p>Para mas información</p>
+                        </ul>
+                    </div>
+                    <button class="btn btn-outline">Más información</button>
+                </div>
+                <div class="card feature-card fade-in">
+                    <div class="card-icon blue">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3>Soporte de Redes</h3>
+                    <p>✅ Domina la gestión de redes y sistemas informáticos empresariales.</p>
+                    <div class="subjects-container">
+                        <h4>Materias destacadas:</h4>
+                        <ul class="subjects-list">
+                            <li><i class="fas fa-check-circle"></i> Resolución</li>
+                            <li><i class="fas fa-check-circle"></i> Configuración</li>
+                            <li><i class="fas fa-check-circle"></i> Ofimática</li>
+                            <li><i class="fas fa-check-circle"></i> Implementación</li>
+                            <p>Para mas información</p>
+                        </ul>
+                    </div>
+                    <button class="btn btn-outline">Más información</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Proyectos: esto son de diferentes materias, se pondran la que mayor actividad tienen -->
+        <section id="proyectos" class="section projects reveal">
+            <div class="section-header light">
+                <h2>Proyectos de los Estudiantes</h2>
+                <div class="section-underline light"></div>
+            </div>
+            
+            <div class="tabs-container">
+                <div class="tabs">
+                    <button class="tab-btn active" data-tab="portales">Portales Web</button>
+                    <button class="tab-btn" data-tab="fol">Formación y Orientación Laboral</button>
+                    <button class="tab-btn" data-tab="otras">Otras Materias</button>
+                </div>
+                
+                <div class="tab-content active" id="portales">
+                    <p>Aquí podrás explorar los proyectos web desarrollados por nuestros estudiantes.</p>
+                    <div class="projecp">
+                        <div class="project-card coming-soon">
+                            <div class="project-overlay">
+                                <span>Próximamente</span>
+                            </div>
+                            <div class="project-info">
+                                <h3>Proyectos en desarrollo</h3>
+                                <p>Nuestros estudiantes están trabajando en increíbles portales web que estarán disponibles muy pronto.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="fol">
+                    <p>En esta materia, los estudiantes se preparan para un futuro laboral, realizando dramas y simulando ambientes laborales para tener más claro su porvenir en el mañana.</p>
+                    <div class="gallery">
+                        <div class="gallery-item">
+                            <img src="https://i.postimg.cc/tJFNprY4/actividad2.jpg" alt="Estudiantes en un drama" class="gallery-img">
+                            <div class="gallery-overlay">
+                                <div class="gallery-info">
+                                    <h4>Simulación laboral</h4>
+                                    <p>Estudiantes practicando escenarios de entrevista</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="https://i.postimg.cc/kMScQ5fP/actividad3.jpg" alt="Estudiantes en un drama" class="gallery-img">
+                            <div class="gallery-overlay">
+                                <div class="gallery-info">
+                                    <h4>Trabajo en equipo</h4>
+                                    <p>Desarrollo de habilidades colaborativas</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="https://i.postimg.cc/kXdyfdp6/actividad1.jpg" alt="Estudiantes en un drama" class="gallery-img">
+                            <div class="gallery-overlay">
+                                <div class="gallery-info">
+                                    <h4>Presentación grupal</h4>
+                                    <p>Exposición de proyectos laborales</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="otras">
+                    <p>Las otras materias como: Reporte, Ofimática, etc., no tienen tantas actividades como las anteriores ya dichas, pero se pondrán todas las evidencias de trabajo a su momento.</p>
+                    <div class="coming-soon-container">
+                        <i class="fas fa-hourglass-half pulse"></i>
+                        <h3>Contenido en preparación</h3>
+                        <p>Estamos trabajando para mostrar más proyectos de nuestros estudiantes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Equipo -->
+        <section id="equipo" class="section reveal">
+            <div class="section-header">
+                <h2>Un Equipo Comprometido</h2>
+                <div class="section-underline"></div>
+            </div>
+            
+            <div class="team-container">
+                <div class="team-category">
+                    <div class="team-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Técnicos</h3>
+                    <ul class="team-list">
+                        <li>Francisco A. Montero</li>
+                        <li>Aneurys Báez Ramírez</li>
+                        <li>Martín Moní</li>
+                        <li>Elena de los Santos</li>
+                        <li>Santa Berenisa Sánchez</li>
+                    </ul>
+                </div>
+                
+                <div class="team-category">
+                    <div class="team-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Académicos</h3>
+                    <ul class="team-list">
+                        <li>Ernestina Adames</li>
+                        <li>Juliana Morillo</li>
+                        <li>Jacqueline Guerrero</li>
+                        <li>Aneurys Ruiz</li>
+                        <li>Liciana Joseph</li>
+                        <li>Joanna Jiménez</li>
+                        <li>Katherine Astacio</li>
+                        <li>Reynaldo Concepción</li>
+                        <li>Katerin Nicasio</li>
+                        <li>Alexis Mazara</li>
+                        <li>Kedwin Valdez</li>
+                    </ul>
+                </div>
+                
+                <div class="team-category">
+                    <div class="team-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3>Liderazgo</h3>
+                    <ul class="team-list">
+                        <li><strong>Directora:</strong> Johanna A. Perozo Martínez</li>
+                        <li><strong>Psicóloga:</strong> Dulce Beriguete</li>
+                        <li><strong>Orientadora:</strong> Diana Mota</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonios: esto posiblemente se quite XD -->
+        <section class="section testimonials reveal">
+            <div class="section-header light">
+                <h2>Lo que dicen nuestros estudiantes</h2>
+                <div class="section-underline light"></div>
+            </div>
+            
+            <div class="testimonial-slider">
+                <div class="testimonial-container">
+                    <div class="testimonial active">
+                        <div class="testimonial-content">
+                            <i class="fas fa-quote-left"></i>
+                            <p>El Politécnico San Rafael me ha dado las herramientas para desarrollarme profesionalmente en el campo de la tecnología. Los profesores son excelentes y el ambiente de aprendizaje es muy motivador.</p>
+                            <div class="testimonial-author">
+                                <div class="author-info">
+                                    <h4>Miguel Rodríguez</h4>
+                                    <p>Estudiante de Desarrollo de Aplicaciones</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <i class="fas fa-quote-left"></i>
+                            <p>Gracias a la formación técnica que he recibido, me siento preparada para enfrentar los retos del mercado laboral. Las prácticas y proyectos reales han sido fundamentales en mi aprendizaje.</p>
+                            <div class="testimonial-author">
+                                <div class="author-info">
+                                    <h4>Laura Méndez</h4>
+                                    <p>Estudiante de Soporte de Redes</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <i class="fas fa-quote-left"></i>
+                            <p>Como padre, estoy muy satisfecho con la educación que recibe mi hijo. Los valores que inculcan y la preparación técnica son exactamente lo que necesitan los jóvenes para triunfar en el mundo actual.</p>
+                            <div class="testimonial-author">
+                                <div class="author-info">
+                                    <h4>Carlos Jiménez</h4>
+                                    <p>Padre de familia</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-controls">
+                    <button class="testimonial-btn prev"><i class="fas fa-chevron-left"></i></button>
+                    <div class="testimonial-dots">
+                        <span class="dot active" data-slide="0"></span>
+                        <span class="dot" data-slide="1"></span>
+                        <span class="dot" data-slide="2"></span>
+                    </div>
+                    <button class="testimonial-btn next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cita -->
+        <section class="section quote reveal">
+            <div class="quote-container">
+                <i class="fas fa-quote-right quote-icon"></i>
+                <blockquote>
+                    <p>La educación no es aprender datos, sino enseñar a tu mente a pensar de forma precisa.</p>
+                    <cite>- Albert Einstein</cite>
+                </blockquote>
+            </div>
+        </section>
+    </div>
+
+    <!-- Pie de Página -->
+    <footer id="contacto">
+        <div class="footer-container">
+            <div class="footer-info">
+                <h3>Politécnico San Rafael</h3>
+                <p>Formando profesionales técnicos para el futuro</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-contact">
+                <h3>Contáctanos</h3>
+                <ul class="contact-list">
+                    <li><i class="fas fa-envelope"></i> 5topolitecnico@gmail.com</li>
+                    <li><i class="fas fa-map-marker-alt"></i> San Rafael, República Dominicana</li>
+                </ul>
+            </div>
+            
+            <div class="footer-form">
+                <h3>Tu opinión es valiosa</h3>
+                <button id="opinion-btn" class="btn btn-light">Compartir opinión</button>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Politécnico San Rafael, Republica Dominicana - Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <!-- Modal de Opinión: aqui se utiliza una acción que manda los datos que han sido dados del usuario a un formspree que es como una base de datos pero que es facil de utilizar (posiblemente inplemente otro metodo) -->
+    <div id="opinion-modal" class="modal">
+        <div class="modal-content">
+            <button class="close-btn" aria-label="Close Modal"><i class="fas fa-times"></i></button>
+            <h3>Comparte tu opinión</h3>
+            <form id="opinionForm" action="https://formspree.io/f/xeoaajgv" method="POST">
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" class="form-control" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="correo">Correo electrónico</label>
+                    <input type="email" id="correo" name="correo" class="form-control" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="opinion">Tu opinión</label>
+                    <textarea id="opinion" name="opinion" class="form-control" rows="4" required></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-primary btn-block">Enviar</button>
+                <p id="form-message"></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Botón volver arriba: boton fijo para volver ariba del todo (no se que hace ahí XD) -->
+    <button id="back-to-top" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!--Anuciós: se quitaran claramente XD -->
+    <amp-auto-ads type="adsense" data-ad-client="ca-pub-2235276428705656"></amp-auto-ads>
+
+    <!-- Vinculación de JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/components.js"></script>
+</body>
+</html>
